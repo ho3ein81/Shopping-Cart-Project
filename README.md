@@ -1,12 +1,72 @@
-# React + Vite
+# 🧩 Components Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This directory contains all reusable and structural **React components** used in the `react11` project.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Available Components
 
-## Expanding the ESLint configuration
+### `Cart.jsx`
+> A component that displays the user's shopping cart with support for quantity change, item deletion, and dynamic total calculation.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Props:  
+  - `cart` → array of cart items
+
+- Features:
+  - Conditional rendering if the cart is empty
+  - Individual item subtotal calculation
+  - General cart total display
+  - FontAwesome trash icon for item deletion (not functional yet)
+
+---
+
+### `Product.jsx`
+> A component to visually display a product item with image, title, price and an “Add” button.
+
+- Props:  
+  - `data` → product object  
+  - `cart` → add-to-cart callback (passed as function)
+
+- Features:
+  - Styled product layout using Flexbox
+  - Add-to-cart event trigger
+
+---
+
+### `Shop.jsx`
+> Maps over the `products` array and renders a list of `Product` components.
+
+- Props:  
+  - `products` → array of product objects
+
+---
+
+## 🖼 Screenshots
+_(Optional: Add screenshots or demo GIFs here if applicable)_
+
+---
+
+## 🎨 Styling
+
+- Components are styled using **Sass (SCSS)**.
+- Layout is built with `flexbox` and custom responsive styles.
+
+---
+
+## 🚀 Coming Next
+
+- Functional "Add", "Remove", and Quantity Update logic
+- Backend/API integration
+- LocalStorage or Context for cart persistence
+
+---
+
+## 🧠 Author
+
+Designed and developed by [Hossein Vali (ho3ein81)](https://github.com/ho3ein81)
+
+---
+
+## 📂 Project Root
+
+To see the full project: [react11 Repository](https://github.com/ho3ein81/react11)
